@@ -222,9 +222,6 @@ section{padding:7rem 5vw;position:relative;z-index:2;}
 footer{background:var(--bg);border-top:1px solid var(--border);padding:4rem 5vw 2rem;position:relative;z-index:2;}
 .footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;padding-bottom:3rem;border-bottom:1px solid var(--border2);margin-bottom:2rem;}
 .footer-logo{display:flex;align-items:center;gap:10px;margin-bottom:1rem;}
-.footer-logo-badge{width:32px;height:32px;background:linear-gradient(135deg,var(--gold),var(--gold2));border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:0.7rem;font-weight:800;color:#08090c;}
-.footer-logo-name{font-size:1.05rem;font-weight:800;color:var(--text);}
-.footer-logo-name span{color:var(--gold);}
 .footer-tagline{font-size:0.83rem;color:var(--text2);line-height:1.7;max-width:260px;}
 .footer-col-title{font-size:0.72rem;font-family:var(--mono);color:var(--text3);text-transform:uppercase;letter-spacing:0.12em;margin-bottom:1.2rem;font-weight:500;}
 .footer-links{list-style:none;display:flex;flex-direction:column;gap:0.65rem;}
@@ -268,8 +265,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:4rem 5vw 
 <!-- NAV -->
 <nav>
   <a href="#" class="logo">
-    <div class="logo-badge">AI</div>
-    AIAdvise<span>Pro</span>
+    <img src="logo.png" alt="AIAdvisePro" style="height:52px;width:auto;display:block;"/>
   </a>
   <ul class="nav-center">
     <li><a href="#services">Services</a></li>
@@ -608,7 +604,6 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:4rem 5vw 
   </div>
 
   <div class="contact-grid reveal">
-    <!-- Left: contact info -->
     <div class="contact-info">
       <div class="contact-card">
         <div class="contact-icon">✉️</div>
@@ -638,14 +633,11 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:4rem 5vw 
       </div>
     </div>
 
-    <!-- Right: contact form (Formspree) -->
     <div class="contact-form-wrap reveal reveal-delay-1">
       <div class="form-title">Send Us a Message</div>
       <div class="form-sub">Tell us about your business and what you're looking to achieve with AI.</div>
 
-      <!-- Replace YOUR_FORM_ID below with your actual Formspree form ID after signing up at formspree.io -->
       <form id="contactForm" action="https://formspree.io/f/mdawwzgp" method="POST">
-
         <div class="form-row">
           <div class="form-group">
             <label class="form-label" for="fname">First Name *</label>
@@ -693,7 +685,6 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:4rem 5vw 
           <textarea class="form-textarea" id="message" name="message" placeholder="Briefly describe your business, the problem you're trying to solve, or what you'd like to automate..." required></textarea>
         </div>
 
-        <!-- Hidden spam prevention -->
         <input type="text" name="_gotcha" style="display:none"/>
         <input type="hidden" name="_subject" value="New Enquiry — AIAdvisePro Website"/>
 
@@ -717,8 +708,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:4rem 5vw 
   <div class="footer-top">
     <div>
       <div class="footer-logo">
-        <div class="footer-logo-badge">AI</div>
-        <div class="footer-logo-name">AIAdvise<span>Pro</span></div>
+        <img src="logo.png" alt="AIAdvisePro" style="height:44px;width:auto;display:block;"/>
       </div>
       <div class="footer-tagline">We help ambitious businesses turn AI from a buzzword into a genuine competitive advantage.</div>
     </div>
@@ -760,7 +750,6 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:4rem 5vw 
 </footer>
 
 <script>
-// Custom cursor
 const cursor=document.getElementById('cursor');
 const ring=document.getElementById('cursor-ring');
 let mx=0,my=0,rx=0,ry=0;
@@ -771,11 +760,9 @@ document.querySelectorAll('a,button').forEach(el=>{
   el.addEventListener('mouseleave',()=>{cursor.style.transform='translate(-50%,-50%) scale(1)';ring.style.transform='translate(-50%,-50%) scale(1)';ring.style.borderColor='rgba(240,165,0,0.4)';});
 });
 
-// Scroll reveal
 const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});},{threshold:0.08});
 document.querySelectorAll('.reveal').forEach(r=>obs.observe(r));
 
-// Counter animation
 function countUp(el,target,suffix){
   const isFloat=String(target).includes('.');
   let i=0,steps=50;
@@ -795,7 +782,6 @@ const impObs=new IntersectionObserver(entries=>{
 const impSec=document.getElementById('impact');
 if(impSec)impObs.observe(impSec);
 
-// Contact form — Formspree AJAX submission
 const form=document.getElementById('contactForm');
 const btn=document.getElementById('submitBtn');
 const success=document.getElementById('formSuccess');
