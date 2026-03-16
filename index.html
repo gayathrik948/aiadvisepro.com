@@ -304,13 +304,13 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:4rem 5vw 
     </div>
 
     <div class="hero-proof">
-      <div class="proof-item"><div class="proof-num">100<span>+</span></div><div class="proof-label">Projects Delivered</div></div>
+      <div class="proof-item"><div class="proof-num">20<span>+</span></div><div class="proof-label">Projects Delivered</div></div>
       <div class="proof-div"></div>
       <div class="proof-item"><div class="proof-num">3.2<span>×</span></div><div class="proof-label">Avg ROI</div></div>
       <div class="proof-div"></div>
       <div class="proof-item"><div class="proof-num">99<span>%</span></div><div class="proof-label">Accuracy Rate</div></div>
       <div class="proof-div"></div>
-      <div class="proof-item"><div class="proof-num">20<span>+</span></div><div class="proof-label">Happy Clients</div></div>
+      <div class="proof-item"><div class="proof-num">10<span>+</span></div><div class="proof-label">Happy Clients</div></div>
     </div>
   </div>
 
@@ -421,7 +421,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:4rem 5vw 
       <div class="impact-sub">// audited & verified</div>
     </div>
     <div class="impact-cell">
-      <div class="impact-big">100+</div>
+      <div class="impact-big">10+</div>
       <div class="impact-label">AI solutions delivered globally</div>
       <div class="impact-sub">// and counting</div>
     </div>
@@ -775,7 +775,7 @@ function countUp(el,target,suffix){
 const impObs=new IntersectionObserver(entries=>{
   if(entries[0].isIntersecting){
     const cells=document.querySelectorAll('.impact-big');
-    countUp(cells[0],80,'%');countUp(cells[1],3.2,'×');countUp(cells[2],100,'+');countUp(cells[3],99,'%');
+    countUp(cells[0],80,'%');countUp(cells[1],3.2,'×');countUp(cells[2],20,'+');countUp(cells[3],99,'%');
     impObs.disconnect();
   }
 },{threshold:0.3});
