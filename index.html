@@ -19,14 +19,17 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--text);font-family:'Bricolage Grotesque',sans-serif;overflow-x:hidden;line-height:1.6;cursor:none;}
-#cursor{position:fixed;width:10px;height:10px;background:var(--gold);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:transform 0.15s,width 0.2s,height 0.2s;mix-blend-mode:difference;}
-#cursor-ring{position:fixed;width:36px;height:36px;border:1.5px solid rgba(240,165,0,0.4);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:all 0.12s ease;}
+html,body,*,*::before,*::after{cursor:none !important;}
+#cursor{position:fixed;width:12px;height:12px;background:var(--gold);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:transform 0.15s,width 0.2s,height 0.2s;left:-100px;top:-100px;}
+#cursor-ring{position:fixed;width:38px;height:38px;border:2px solid rgba(240,165,0,0.6);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:left 0.08s ease,top 0.08s ease,transform 0.15s,border-color 0.2s;left:-100px;top:-100px;}
 body::after{content:'';position:fixed;inset:0;z-index:1;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.028'/%3E%3C/svg%3E");opacity:0.6;}
 nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:1.1rem 5vw;background:rgba(8,9,12,0.85);backdrop-filter:blur(24px);border-bottom:1px solid var(--border);}
 .logo{display:flex;align-items:center;gap:10px;font-size:1.15rem;font-weight:800;letter-spacing:-0.5px;color:var(--text);text-decoration:none;}
 .nav-center{display:flex;gap:2rem;list-style:none;font-size:0.82rem;font-weight:500;}
 .nav-center a{color:var(--text2);text-decoration:none;transition:color 0.2s;}
 .nav-center a:hover{color:var(--text);}
+.nav-center a.active{color:var(--gold);position:relative;}
+.nav-center a.active::after{content:'';position:absolute;bottom:-4px;left:0;right:0;height:2px;background:var(--gold);border-radius:2px;}
 .nav-btn{background:var(--gold);color:#08090c;padding:0.6rem 1.4rem;border-radius:8px;font-weight:800;font-size:0.82rem;text-decoration:none;transition:transform 0.2s,box-shadow 0.2s;box-shadow:0 0 24px rgba(240,165,0,0.25);}
 .nav-btn:hover{transform:translateY(-2px);box-shadow:0 4px 32px rgba(240,165,0,0.45);}
 #hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:9rem 5vw 5rem;position:relative;overflow:hidden;}
@@ -229,6 +232,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:4rem 5vw 
   .hero-headline{letter-spacing:-2px;}
   .stack-grid{grid-template-columns:1fr 1fr;}
   body{cursor:auto;}
+  html,body,*,*::before,*::after{cursor:auto !important;}
   #cursor,#cursor-ring{display:none;}
 }
 </style>
@@ -687,7 +691,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:4rem 5vw 
         <div class="contact-icon">&#9993;&#65039;</div>
         <div>
           <div class="contact-label">Email Us</div>
-          <div class="contact-value"><a href="/cdn-cgi/l/email-protection#b8d9d1d9dcced1cbddc8cad7f8dfd5d9d1d496dbd7d5"><span class="__cf_email__" data-cfemail="ddbcb4bcb9abb4aeb8adafb29dbab0bcb4b1f3beb2b0">[email&#160;protected]</span></a></div>
+          <div class="contact-value"><a href="mailto:aiadvisepro@gmail.com">aiadvisepro@gmail.com</a></div>
         </div>
       </div>
       <div class="contact-card">
@@ -740,6 +744,11 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:4rem 5vw 
         <div class="form-group">
           <label class="form-label" for="company">Company / Organisation</label>
           <input class="form-input" type="text" id="company" name="company" placeholder="Your Company Name"/>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="location">Your Location</label>
+          <input class="form-input" type="text" id="location" name="location" placeholder="City, Country"/>
         </div>
 
         <div class="form-group">
@@ -813,7 +822,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:4rem 5vw 
     <div>
       <div class="footer-col-title">Contact</div>
       <ul class="footer-links">
-        <li><a href="/cdn-cgi/l/email-protection#c1a0a8a0a5b7a8b2a4b1b3ae81a6aca0a8adefa2aeac"><span class="__cf_email__" data-cfemail="2f4e464e4b59465c4a5f5d406f48424e4643014c4042">[email&#160;protected]</span></a></li>
+        <li><a href="mailto:aiadvisepro@gmail.com">aiadvisepro@gmail.com</a></li>
         <li><a href="tel:+919622759081">+91 96227 59081</a></li>
         <li><a href="#contact">Send a Message</a></li>
         <li><a href="https://www.linkedin.com/company/aiadvise-pro/about/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
@@ -827,7 +836,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:4rem 5vw 
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 const cursor=document.getElementById('cursor');
 const ring=document.getElementById('cursor-ring');
 let mx=0,my=0,rx=0,ry=0;
@@ -837,8 +846,24 @@ document.querySelectorAll('a,button').forEach(el=>{
   el.addEventListener('mouseenter',()=>{cursor.style.transform='translate(-50%,-50%) scale(2.5)';ring.style.transform='translate(-50%,-50%) scale(1.6)';ring.style.borderColor='rgba(240,165,0,0.7)';});
   el.addEventListener('mouseleave',()=>{cursor.style.transform='translate(-50%,-50%) scale(1)';ring.style.transform='translate(-50%,-50%) scale(1)';ring.style.borderColor='rgba(240,165,0,0.4)';});
 });
+// NAV SCROLL SPY
+const sections=document.querySelectorAll('section[id]');
+const navLinks=document.querySelectorAll('.nav-center a');
+const navObs=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      navLinks.forEach(link=>{
+        link.classList.remove('active');
+        if(link.getAttribute('href')==='#'+entry.target.id)link.classList.add('active');
+      });
+    }
+  });
+},{threshold:0.3,rootMargin:'-60px 0px -60px 0px'});
+sections.forEach(s=>navObs.observe(s));
+// REVEAL
 const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});},{threshold:0.05});
 document.querySelectorAll('.reveal').forEach(r=>{r.classList.add('animate-ready');obs.observe(r);});
+// FORM
 const form=document.getElementById('contactForm');
 const btn=document.getElementById('submitBtn');
 const success=document.getElementById('formSuccess');
@@ -846,10 +871,24 @@ if(form){
   form.addEventListener('submit',async function(e){
     e.preventDefault();
     btn.disabled=true;
-    btn.innerHTML='Sending...';
+    btn.innerHTML='Sending... <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 3v10M3 8l5-5 5 5" stroke="#08090c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
     try{
       const res=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{Accept:'application/json'}});
       if(res.ok){
         form.style.display='none';
         success.style.display='block';
-      } el
+      } else {
+        btn.disabled=false;
+        btn.innerHTML='Send Message <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#08090c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+        alert('Something went wrong. Please email us directly at aiadvisepro@gmail.com');
+      }
+    } catch(err){
+      btn.disabled=false;
+      btn.innerHTML='Send Message →';
+      alert('Could not send. Please email us at aiadvisepro@gmail.com or call +91 96227 59081');
+    }
+  });
+}
+</script>
+</body>
+</html>
