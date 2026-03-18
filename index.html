@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>AIAdvisePro – Turn AI Into Your Competitive Advantage</title>
+<title>AIAdvisePro – AI &amp; Agentic Engineering Team</title>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700;12..96,800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
 <style>
 :root{
@@ -19,26 +19,16 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--text);font-family:'Bricolage Grotesque',sans-serif;overflow-x:hidden;line-height:1.6;cursor:none;}
-
-/* CURSOR */
 #cursor{position:fixed;width:10px;height:10px;background:var(--gold);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:transform 0.15s,width 0.2s,height 0.2s;mix-blend-mode:difference;}
 #cursor-ring{position:fixed;width:36px;height:36px;border:1.5px solid rgba(240,165,0,0.4);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:all 0.12s ease;}
-
-/* GRAIN */
 body::after{content:'';position:fixed;inset:0;z-index:1;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.028'/%3E%3C/svg%3E");opacity:0.6;}
-
-/* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:1.1rem 5vw;background:rgba(8,9,12,0.85);backdrop-filter:blur(24px);border-bottom:1px solid var(--border);}
 .logo{display:flex;align-items:center;gap:10px;font-size:1.15rem;font-weight:800;letter-spacing:-0.5px;color:var(--text);text-decoration:none;}
-.logo-badge{background:linear-gradient(135deg,var(--gold),var(--gold2));width:34px;height:34px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:0.72rem;font-weight:800;color:#08090c;flex-shrink:0;box-shadow:0 0 20px rgba(240,165,0,0.3);}
-.logo span{color:var(--gold);}
 .nav-center{display:flex;gap:2rem;list-style:none;font-size:0.82rem;font-weight:500;}
 .nav-center a{color:var(--text2);text-decoration:none;transition:color 0.2s;}
 .nav-center a:hover{color:var(--text);}
 .nav-btn{background:var(--gold);color:#08090c;padding:0.6rem 1.4rem;border-radius:8px;font-weight:800;font-size:0.82rem;text-decoration:none;transition:transform 0.2s,box-shadow 0.2s;box-shadow:0 0 24px rgba(240,165,0,0.25);}
 .nav-btn:hover{transform:translateY(-2px);box-shadow:0 4px 32px rgba(240,165,0,0.45);}
-
-/* HERO */
 #hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:9rem 5vw 5rem;position:relative;overflow:hidden;}
 .hero-mesh{position:absolute;inset:0;z-index:0;background:radial-gradient(ellipse 80% 50% at 20% 20%,rgba(240,165,0,0.06) 0%,transparent 60%),radial-gradient(ellipse 60% 60% at 80% 80%,rgba(59,130,246,0.06) 0%,transparent 60%);}
 .hero-grid{position:absolute;inset:0;z-index:0;background-image:linear-gradient(rgba(255,255,255,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.025) 1px,transparent 1px);background-size:80px 80px;mask-image:radial-gradient(ellipse 90% 90% at 50% 50%,black 20%,transparent 90%);}
@@ -47,11 +37,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .orb2{width:500px;height:500px;background:radial-gradient(circle,rgba(59,130,246,0.07) 0%,transparent 70%);bottom:-100px;right:-100px;animation:orbDrift 15s ease-in-out infinite reverse;}
 @keyframes orbDrift{0%,100%{transform:translateY(0) scale(1);}50%{transform:translateY(-40px) scale(1.05);}}
 .hero-content{position:relative;z-index:2;}
-@keyframes pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:0.5;transform:scale(0.7);}}
 .hero-headline{font-size:clamp(3rem,7.5vw,7rem);font-weight:800;line-height:0.95;letter-spacing:-3px;margin-bottom:1.2rem;animation:fadeUp 0.8s 0.1s ease both;}
 .hero-headline .gold{color:var(--gold);}
 .hero-headline .outline{-webkit-text-stroke:1px rgba(255,255,255,0.3);color:transparent;}
-.hero-sub{max-width:560px;margin:0 auto 2.5rem;font-size:1.1rem;color:var(--text2);line-height:1.75;animation:fadeUp 0.8s 0.2s ease both;}
+.hero-sub{max-width:580px;margin:0 auto 2.5rem;font-size:1.1rem;color:var(--text2);line-height:1.75;animation:fadeUp 0.8s 0.2s ease both;}
 .hero-actions{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;animation:fadeUp 0.8s 0.3s ease both;}
 .btn-gold{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#08090c;padding:1rem 2.4rem;border-radius:10px;font-weight:800;font-size:1rem;text-decoration:none;box-shadow:0 4px 32px rgba(240,165,0,0.35);transition:transform 0.2s,box-shadow 0.2s;display:inline-flex;align-items:center;gap:8px;}
 .btn-gold:hover{transform:translateY(-3px);box-shadow:0 8px 48px rgba(240,165,0,0.5);}
@@ -66,23 +55,17 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .scroll-hint{position:absolute;bottom:2.5rem;left:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:6px;color:var(--text3);font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;animation:fadeUp 1s 0.8s ease both;}
 .scroll-line{width:1px;height:40px;background:linear-gradient(var(--gold),transparent);animation:scrollLine 2s ease-in-out infinite;}
 @keyframes scrollLine{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
-
-/* TICKER */
 .ticker{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:0.9rem 0;overflow:hidden;}
 .ticker-track{display:flex;width:max-content;animation:ticker 30s linear infinite;font-size:0.78rem;font-weight:600;color:var(--text3);letter-spacing:0.05em;font-family:var(--mono);}
 @keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 .tick-item{display:inline-flex;align-items:center;gap:0.6rem;padding:0 2.5rem;white-space:nowrap;}
 .tick-sep{color:var(--gold);opacity:0.6;}
-
-/* SECTIONS */
 section{padding:7rem 5vw;position:relative;z-index:2;}
 .eyebrow{font-family:var(--mono);font-size:0.72rem;font-weight:500;color:var(--gold);letter-spacing:0.18em;text-transform:uppercase;margin-bottom:1rem;display:flex;align-items:center;gap:10px;}
 .eyebrow::before{content:'//';opacity:0.5;}
 .section-title{font-size:clamp(2rem,4vw,3.5rem);font-weight:800;letter-spacing:-2px;line-height:1.05;margin-bottom:1.2rem;}
 .section-title .accent{color:var(--gold);}
 .section-desc{color:var(--text2);max-width:500px;font-size:0.98rem;line-height:1.8;}
-
-/* SERVICES */
 #services{background:var(--bg);}
 .services-header{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:end;margin-bottom:4rem;}
 .services-header .right p{color:var(--text2);line-height:1.8;font-size:0.95rem;margin-bottom:1.5rem;}
@@ -101,19 +84,41 @@ section{padding:7rem 5vw;position:relative;z-index:2;}
 .svc-tag{font-size:0.65rem;font-family:var(--mono);background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:4px;padding:0.2rem 0.55rem;color:var(--text3);}
 .svc-arrow{position:absolute;top:1.5rem;right:1.5rem;font-size:1rem;color:var(--gold);opacity:0;transition:opacity 0.3s,transform 0.3s;}
 
-/* IMPACT */
-#impact{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
-.impact-inner{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--border);border-radius:20px;overflow:hidden;background:var(--border);}
-.impact-cell{background:var(--card);padding:3rem 2rem;text-align:center;position:relative;overflow:hidden;transition:background 0.3s;cursor:default;}
-.impact-cell:hover{background:var(--card2);}
-.impact-cell::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:0;transition:opacity 0.3s;}
-.impact-cell:hover::before{opacity:1;}
-.impact-big{font-size:3.5rem;font-weight:800;letter-spacing:-3px;background:linear-gradient(135deg,var(--gold),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;margin-bottom:0.5rem;}
-.impact-label{font-size:0.82rem;color:var(--text2);font-weight:500;margin-bottom:0.4rem;}
-.impact-sub{font-size:0.72rem;color:var(--text3);font-family:var(--mono);}
+/* EXPERTISE */
+#expertise{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.expertise-inner{display:grid;grid-template-columns:1.1fr 1fr;gap:5rem;align-items:center;}
+.expertise-profile{display:flex;align-items:center;gap:1.5rem;margin-bottom:2.5rem;padding:1.5rem;background:var(--card);border:1px solid var(--border);border-radius:16px;}
+.profile-avatar{width:72px;height:72px;border-radius:16px;background:linear-gradient(135deg,var(--gold),var(--gold2));display:flex;align-items:center;justify-content:center;font-size:1.6rem;flex-shrink:0;box-shadow:0 0 30px rgba(240,165,0,0.25);}
+.profile-name{font-size:1.1rem;font-weight:800;color:var(--text);margin-bottom:0.2rem;}
+.profile-title{font-size:0.78rem;color:var(--gold);font-family:var(--mono);font-weight:500;margin-bottom:0.35rem;}
+.profile-bio{font-size:0.8rem;color:var(--text2);line-height:1.6;}
+.expertise-badges{display:flex;flex-wrap:wrap;gap:0.6rem;margin-bottom:2rem;}
+.exp-badge{display:flex;align-items:center;gap:0.5rem;background:rgba(240,165,0,0.06);border:1px solid rgba(240,165,0,0.18);border-radius:8px;padding:0.45rem 0.9rem;font-size:0.75rem;font-family:var(--mono);color:var(--text2);}
+.exp-badge-dot{width:6px;height:6px;border-radius:50%;background:var(--gold);flex-shrink:0;}
+.expertise-quote{background:var(--card);border:1px solid var(--border);border-left:3px solid var(--gold);border-radius:12px;padding:1.5rem 1.8rem;font-size:0.92rem;color:var(--text2);line-height:1.8;font-style:italic;}
+.expertise-quote strong{color:var(--text);font-style:normal;}
+.expertise-stats{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border);border-radius:20px;overflow:hidden;}
+.exp-stat{background:var(--card);padding:2.2rem 1.8rem;position:relative;overflow:hidden;transition:background 0.3s;cursor:default;}
+.exp-stat:hover{background:var(--card2);}
+.exp-stat::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:0;transition:opacity 0.3s;}
+.exp-stat:hover::before{opacity:1;}
+.exp-stat-num{font-size:3rem;font-weight:800;letter-spacing:-2px;background:linear-gradient(135deg,var(--gold),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;margin-bottom:0.5rem;}
+.exp-stat-label{font-size:0.85rem;font-weight:600;color:var(--text);margin-bottom:0.3rem;}
+.exp-stat-sub{font-size:0.72rem;color:var(--text3);font-family:var(--mono);line-height:1.5;}
+
+/* TECH STACK */
+#stack{background:var(--bg);}
+.stack-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-top:3.5rem;}
+.stack-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:1.8rem;transition:transform 0.3s,border-color 0.3s;cursor:default;}
+.stack-card:hover{transform:translateY(-4px);border-color:rgba(240,165,0,0.25);}
+.stack-icon{font-size:1.8rem;margin-bottom:1rem;}
+.stack-category{font-size:0.65rem;font-family:var(--mono);color:var(--text3);text-transform:uppercase;letter-spacing:0.12em;margin-bottom:0.4rem;}
+.stack-name{font-size:0.95rem;font-weight:700;color:var(--text);margin-bottom:0.7rem;}
+.stack-tools{display:flex;flex-wrap:wrap;gap:0.35rem;}
+.stack-tool{font-size:0.62rem;font-family:var(--mono);background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:4px;padding:0.18rem 0.5rem;color:var(--text3);}
 
 /* HOW */
-#how{background:var(--bg);}
+#how{background:var(--bg2);}
 .how-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:6rem;align-items:center;}
 .steps{display:flex;flex-direction:column;}
 .step{display:flex;gap:1.5rem;padding:2rem 0;border-bottom:1px solid var(--border2);position:relative;cursor:default;transition:padding-left 0.3s;}
@@ -123,7 +128,6 @@ section{padding:7rem 5vw;position:relative;z-index:2;}
 .step-content{flex:1;}
 .step-title{font-size:1.05rem;font-weight:700;color:var(--text);margin-bottom:0.5rem;}
 .step-desc{font-size:0.85rem;color:var(--text2);line-height:1.75;}
-
 .terminal-wrap{background:var(--card);border:1px solid var(--border);border-radius:20px;overflow:hidden;box-shadow:0 32px 80px rgba(0,0,0,0.4);}
 .term-bar{background:rgba(255,255,255,0.03);padding:0.9rem 1.2rem;display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--border);}
 .td{width:11px;height:11px;border-radius:50%;}
@@ -139,32 +143,13 @@ section{padding:7rem 5vw;position:relative;z-index:2;}
 .tm-val.gold{color:var(--gold);}.tm-val.blue{color:var(--blue2);}
 .tm-label{font-size:0.68rem;font-family:var(--mono);color:var(--text3);}
 
-/* TESTIMONIALS */
-#testimonials{background:var(--bg2);}
-.testi-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:3.5rem;flex-wrap:wrap;gap:1.5rem;}
-.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;}
-.testi{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:2rem;transition:transform 0.3s,border-color 0.3s,box-shadow 0.3s;cursor:default;position:relative;overflow:hidden;}
-.testi:hover{transform:translateY(-6px);border-color:rgba(240,165,0,0.2);box-shadow:0 20px 60px rgba(0,0,0,0.3);}
-.testi::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(240,165,0,0.4),transparent);opacity:0;transition:opacity 0.3s;}
-.testi:hover::before{opacity:1;}
-.testi-q{font-size:2.8rem;color:var(--gold);opacity:0.15;line-height:1;margin-bottom:0.5rem;font-weight:800;}
-.testi-stars{color:var(--gold);font-size:0.85rem;letter-spacing:3px;margin-bottom:1rem;}
-.testi-text{font-size:0.9rem;color:var(--text2);line-height:1.85;margin-bottom:1.5rem;}
-.testi-author{display:flex;align-items:center;gap:0.75rem;}
-.testi-av{width:42px;height:42px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:0.82rem;color:#08090c;flex-shrink:0;}
-.av1{background:linear-gradient(135deg,var(--gold),var(--gold2));}.av2{background:linear-gradient(135deg,var(--blue),var(--blue2));}.av3{background:linear-gradient(135deg,var(--green),#34d399);}
-.testi-name{font-weight:700;font-size:0.88rem;color:var(--text);}
-.testi-role{font-size:0.72rem;color:var(--text3);font-family:var(--mono);}
-.testi-result{margin-top:1.2rem;padding-top:1.2rem;border-top:1px solid var(--border2);font-size:0.75rem;font-family:var(--mono);display:flex;align-items:center;gap:6px;color:var(--green);}
-.result-dot{width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:0 0 6px var(--green);flex-shrink:0;}
-
-/* HOW WE ENGAGE */
+/* ENGAGE */
 #engage{background:var(--bg);}
 .engage-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3.5rem;}
 .engage-card{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:2.5rem;transition:transform 0.3s,border-color 0.3s;cursor:default;position:relative;}
 .engage-card:hover{transform:translateY(-5px);border-color:rgba(240,165,0,0.25);}
 .engage-card.highlight{border-color:rgba(240,165,0,0.35);background:linear-gradient(135deg,rgba(240,165,0,0.05),rgba(240,165,0,0.02));box-shadow:0 0 50px rgba(240,165,0,0.07);}
-.engage-card.highlight::before{content:'Most Chosen';position:absolute;top:1.5rem;right:1.5rem;font-size:0.65rem;font-family:var(--mono);font-weight:500;background:var(--gold);color:#08090c;padding:0.25rem 0.65rem;border-radius:4px;letter-spacing:0.05em;}
+.engage-card.highlight::before{content:'Most Popular';position:absolute;top:1.5rem;right:1.5rem;font-size:0.65rem;font-family:var(--mono);font-weight:500;background:var(--gold);color:#08090c;padding:0.25rem 0.65rem;border-radius:4px;letter-spacing:0.05em;}
 .engage-type{font-size:0.75rem;font-family:var(--mono);color:var(--text3);text-transform:uppercase;letter-spacing:0.12em;margin-bottom:0.75rem;}
 .engage-name{font-size:1.2rem;font-weight:800;margin-bottom:0.6rem;color:var(--text);}
 .engage-desc{font-size:0.85rem;color:var(--text2);line-height:1.7;margin-bottom:2rem;}
@@ -180,7 +165,6 @@ section{padding:7rem 5vw;position:relative;z-index:2;}
 /* CONTACT */
 #contact{background:var(--bg2);}
 .contact-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:5rem;align-items:start;margin-top:3.5rem;}
-
 .contact-info{display:flex;flex-direction:column;gap:1.5rem;}
 .contact-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.5rem;display:flex;align-items:center;gap:1rem;transition:border-color 0.2s,transform 0.2s;}
 .contact-card:hover{border-color:rgba(240,165,0,0.25);transform:translateX(4px);}
@@ -189,19 +173,14 @@ section{padding:7rem 5vw;position:relative;z-index:2;}
 .contact-value{font-size:0.95rem;font-weight:600;color:var(--text);}
 .contact-value a{color:var(--text);text-decoration:none;transition:color 0.2s;}
 .contact-value a:hover{color:var(--gold);}
-
 .contact-note{background:rgba(240,165,0,0.05);border:1px solid rgba(240,165,0,0.15);border-radius:12px;padding:1.2rem 1.5rem;margin-top:0.5rem;}
 .contact-note-text{font-size:0.82rem;color:var(--text2);line-height:1.7;}
 .contact-note-text strong{color:var(--gold);font-weight:700;}
-
-/* FORM */
 .contact-form-wrap{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:2.5rem;}
 .form-title{font-size:1.1rem;font-weight:800;margin-bottom:0.4rem;color:var(--text);}
 .form-sub{font-size:0.83rem;color:var(--text2);margin-bottom:2rem;line-height:1.6;}
-
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem;}
 .form-group{display:flex;flex-direction:column;gap:0.4rem;margin-bottom:1rem;}
-.form-group.full{grid-column:1/-1;}
 .form-label{font-size:0.72rem;font-family:var(--mono);color:var(--text3);text-transform:uppercase;letter-spacing:0.1em;font-weight:500;}
 .form-input,.form-select,.form-textarea{background:rgba(255,255,255,0.04);border:1px solid var(--border);color:var(--text);padding:0.85rem 1rem;border-radius:8px;font-family:'Bricolage Grotesque',sans-serif;font-size:0.88rem;outline:none;transition:border-color 0.2s,box-shadow 0.2s;width:100%;}
 .form-input:focus,.form-select:focus,.form-textarea:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(240,165,0,0.1);}
@@ -212,13 +191,10 @@ section{padding:7rem 5vw;position:relative;z-index:2;}
 .form-submit{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#08090c;padding:0.95rem 2rem;border-radius:10px;font-weight:800;font-size:0.95rem;border:none;cursor:pointer;width:100%;transition:transform 0.2s,box-shadow 0.2s;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 4px 24px rgba(240,165,0,0.3);}
 .form-submit:hover{transform:translateY(-2px);box-shadow:0 8px 36px rgba(240,165,0,0.45);}
 .form-submit:disabled{opacity:0.6;cursor:not-allowed;transform:none;}
-
 .form-success{display:none;text-align:center;padding:2rem;background:rgba(16,185,129,0.06);border:1px solid rgba(16,185,129,0.2);border-radius:12px;margin-top:1rem;}
 .form-success-icon{font-size:2rem;margin-bottom:0.75rem;}
 .form-success-title{font-size:1rem;font-weight:700;color:var(--green);margin-bottom:0.4rem;}
 .form-success-text{font-size:0.85rem;color:var(--text2);line-height:1.6;}
-
-/* FOOTER */
 footer{background:var(--bg);border-top:1px solid var(--border);padding:4rem 5vw 2rem;position:relative;z-index:2;}
 .footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;padding-bottom:3rem;border-bottom:1px solid var(--border2);margin-bottom:2rem;}
 .footer-logo{display:flex;align-items:center;gap:10px;margin-bottom:1rem;}
@@ -228,10 +204,9 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:4rem 5vw 
 .footer-links a{font-size:0.85rem;color:var(--text2);text-decoration:none;transition:color 0.2s;}
 .footer-links a:hover{color:var(--gold);}
 .footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;font-size:0.75rem;color:var(--text3);font-family:var(--mono);}
-
-/* REVEAL */
-.reveal{opacity:0;transform:translateY(28px);transition:opacity 0.7s ease,transform 0.7s ease;}
-.reveal.visible{opacity:1;transform:translateY(0);}
+.reveal{opacity:1;transform:translateY(0);transition:opacity 0.7s ease,transform 0.7s ease;}
+.reveal.animate-ready{opacity:0;transform:translateY(28px);}
+.reveal.animate-ready.visible{opacity:1;transform:translateY(0);}
 .reveal-delay-1{transition-delay:0.15s;}
 @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
 
@@ -239,19 +214,20 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:4rem 5vw 
   .services-grid{grid-template-columns:repeat(2,1fr);}
   .how-grid{grid-template-columns:1fr;gap:3rem;}
   .engage-grid{grid-template-columns:1fr 1fr;gap:1rem;}
-  .testi-grid{grid-template-columns:1fr 1fr;}
   .footer-top{grid-template-columns:1fr 1fr;}
   .services-header{grid-template-columns:1fr;}
-  .impact-inner{grid-template-columns:1fr 1fr;}
+  .expertise-inner{grid-template-columns:1fr;gap:3rem;}
+  .expertise-stats{grid-template-columns:1fr 1fr;}
+  .stack-grid{grid-template-columns:repeat(2,1fr);}
   .contact-grid{grid-template-columns:1fr;gap:2.5rem;}
 }
 @media(max-width:768px){
   .nav-center{display:none;}
   .services-grid{grid-template-columns:1fr;}
-  .testi-grid{grid-template-columns:1fr;}
   .engage-grid{grid-template-columns:1fr;}
   .form-row{grid-template-columns:1fr;}
   .hero-headline{letter-spacing:-2px;}
+  .stack-grid{grid-template-columns:1fr 1fr;}
   body{cursor:auto;}
   #cursor,#cursor-ring{display:none;}
 }
@@ -269,8 +245,9 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:4rem 5vw 
   </a>
   <ul class="nav-center">
     <li><a href="#services">Services</a></li>
+    <li><a href="#expertise">Expertise</a></li>
+    <li><a href="#stack">Tech Stack</a></li>
     <li><a href="#how">Process</a></li>
-    <li><a href="#engage">Engagement</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
   <a href="#contact" class="nav-btn">Get in Touch →</a>
@@ -292,7 +269,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:4rem 5vw 
     </h1>
 
     <p class="hero-sub">
-      AIAdvisePro helps ambitious companies identify the right AI opportunities, build intelligent systems that actually work, and measure results that move the needle.
+      AIAdvisePro is a team of AI &amp; Agentic Engineers with deep industry experience — designing autonomous AI systems, intelligent agents, and LLM-powered pipelines that actually work in production and move the needle for your business.
     </p>
 
     <div class="hero-actions">
@@ -300,17 +277,17 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:4rem 5vw 
         Get Your Free AI Audit
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#08090c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
-      <a href="#how" class="btn-ghost">▶ &nbsp;See How It Works</a>
+      <a href="#how" class="btn-ghost">&#9654; &nbsp;See How It Works</a>
     </div>
 
     <div class="hero-proof">
-      <div class="proof-item"><div class="proof-num">20<span>+</span></div><div class="proof-label">Projects Delivered</div></div>
+      <div class="proof-item"><div class="proof-num">50<span>+</span></div><div class="proof-label">AI Projects Built</div></div>
       <div class="proof-div"></div>
-      <div class="proof-item"><div class="proof-num">3.2<span>×</span></div><div class="proof-label">Avg ROI</div></div>
+      <div class="proof-item"><div class="proof-num">8<span>+</span></div><div class="proof-label">Years Experience</div></div>
       <div class="proof-div"></div>
-      <div class="proof-item"><div class="proof-num">99<span>%</span></div><div class="proof-label">Accuracy Rate</div></div>
+      <div class="proof-item"><div class="proof-num">99<span>%</span></div><div class="proof-label">Extraction Accuracy</div></div>
       <div class="proof-div"></div>
-      <div class="proof-item"><div class="proof-num">10<span>+</span></div><div class="proof-label">Happy Clients</div></div>
+      <div class="proof-item"><div class="proof-num">10<span>+</span></div><div class="proof-label">Industries Served</div></div>
     </div>
   </div>
 
@@ -323,22 +300,22 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:4rem 5vw 
 <!-- TICKER -->
 <div class="ticker">
   <div class="ticker-track">
-    <span class="tick-item"><span class="tick-sep">◆</span> AI Strategy & Roadmap</span>
-    <span class="tick-item"><span class="tick-sep">◆</span> AI Document Intelligence</span>
-    <span class="tick-item"><span class="tick-sep">◆</span> Multi-Agent Systems</span>
-    <span class="tick-item"><span class="tick-sep">◆</span> AI Process Automation</span>
-    <span class="tick-item"><span class="tick-sep">◆</span> Predictive Analytics</span>
-    <span class="tick-item"><span class="tick-sep">◆</span> LLM Fine-Tuning</span>
-    <span class="tick-item"><span class="tick-sep">◆</span> RAG Pipelines</span>
-    <span class="tick-item"><span class="tick-sep">◆</span> Conversational AI Agents</span>
-    <span class="tick-item"><span class="tick-sep">◆</span> AI Strategy & Roadmap</span>
-    <span class="tick-item"><span class="tick-sep">◆</span> AI Document Intelligence</span>
-    <span class="tick-item"><span class="tick-sep">◆</span> Multi-Agent Systems</span>
-    <span class="tick-item"><span class="tick-sep">◆</span> Process Automation</span>
-    <span class="tick-item"><span class="tick-sep">◆</span> Predictive Analytics</span>
-    <span class="tick-item"><span class="tick-sep">◆</span> LLM Fine-Tuning</span>
-    <span class="tick-item"><span class="tick-sep">◆</span> RAG Pipelines</span>
-    <span class="tick-item"><span class="tick-sep">◆</span> Conversational AI Agents</span>
+    <span class="tick-item"><span class="tick-sep">&#9670;</span> AI Strategy &amp; Roadmap</span>
+    <span class="tick-item"><span class="tick-sep">&#9670;</span> AI Document Intelligence</span>
+    <span class="tick-item"><span class="tick-sep">&#9670;</span> Multi-Agent Systems</span>
+    <span class="tick-item"><span class="tick-sep">&#9670;</span> AI Process Automation</span>
+    <span class="tick-item"><span class="tick-sep">&#9670;</span> Predictive Analytics</span>
+    <span class="tick-item"><span class="tick-sep">&#9670;</span> LLM Fine-Tuning</span>
+    <span class="tick-item"><span class="tick-sep">&#9670;</span> RAG Pipelines</span>
+    <span class="tick-item"><span class="tick-sep">&#9670;</span> Conversational AI Agents</span>
+    <span class="tick-item"><span class="tick-sep">&#9670;</span> AI Strategy &amp; Roadmap</span>
+    <span class="tick-item"><span class="tick-sep">&#9670;</span> AI Document Intelligence</span>
+    <span class="tick-item"><span class="tick-sep">&#9670;</span> Multi-Agent Systems</span>
+    <span class="tick-item"><span class="tick-sep">&#9670;</span> Process Automation</span>
+    <span class="tick-item"><span class="tick-sep">&#9670;</span> Predictive Analytics</span>
+    <span class="tick-item"><span class="tick-sep">&#9670;</span> LLM Fine-Tuning</span>
+    <span class="tick-item"><span class="tick-sep">&#9670;</span> RAG Pipelines</span>
+    <span class="tick-item"><span class="tick-sep">&#9670;</span> Conversational AI Agents</span>
   </div>
 </div>
 
@@ -350,85 +327,229 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:4rem 5vw 
       <h2 class="section-title">AI That <span class="accent">Works</span><br/>For Your Business</h2>
     </div>
     <div class="right">
-      <p>We don't sell generic AI products. Every solution is custom-built, rigorously tested, and backed by ongoing support — so you see results, not just demos.</p>
-      <a href="#contact" class="btn-gold" style="font-size:0.88rem;padding:0.75rem 1.6rem;">Start with a Free Audit →</a>
+      <p>Every solution is custom-built by our team of AI &amp; Agentic Engineers — rigorously tested and designed around your specific workflows. No generic products. No guesswork. Just AI that delivers measurable results.</p>
+      <a href="#contact" class="btn-gold" style="font-size:0.88rem;padding:0.75rem 1.6rem;">Start with a Free Audit &#8594;</a>
     </div>
   </div>
 
   <div class="services-grid reveal">
     <div class="svc">
-      <div class="svc-num">01 — STRATEGY</div>
-      <div class="svc-icon">🎯</div>
-      <div class="svc-title">AI Readiness & Roadmap</div>
+      <div class="svc-num">01 &#8212; STRATEGY</div>
+      <div class="svc-icon">&#127919;</div>
+      <div class="svc-title">AI Readiness &amp; Roadmap</div>
       <div class="svc-desc">We audit your workflows, identify the highest-ROI AI opportunities, and hand you a clear, prioritised implementation plan tailored to your business.</div>
       <div class="svc-stack"><span class="svc-tag">Gap Analysis</span><span class="svc-tag">ROI Modeling</span><span class="svc-tag">Roadmapping</span></div>
-      <div class="svc-arrow">↗</div>
+      <div class="svc-arrow">&#8599;</div>
     </div>
     <div class="svc">
-      <div class="svc-num">02 — AGENTS</div>
-      <div class="svc-icon">🤖</div>
+      <div class="svc-num">02 &#8212; AGENTS</div>
+      <div class="svc-icon">&#129302;</div>
       <div class="svc-title">Custom AI Agent Development</div>
       <div class="svc-desc">From single-task bots to complex multi-agent pipelines — we design, build, and deploy autonomous systems that handle your most tedious workflows around the clock.</div>
       <div class="svc-stack"><span class="svc-tag">LangGraph</span><span class="svc-tag">CrewAI</span><span class="svc-tag">AutoGen</span></div>
-      <div class="svc-arrow">↗</div>
+      <div class="svc-arrow">&#8599;</div>
     </div>
     <div class="svc">
-      <div class="svc-num">03 — DOCUMENTS</div>
-      <div class="svc-icon">📄</div>
+      <div class="svc-num">03 &#8212; DOCUMENTS</div>
+      <div class="svc-icon">&#128196;</div>
       <div class="svc-title">Document Intelligence</div>
-      <div class="svc-desc">Extract, classify, and validate structured data from any PDF, or document with high accuracy using vision LLMs and multi-stage validation pipelines.</div>
+      <div class="svc-desc">Extract, classify, and validate structured data from any PDF or document with high accuracy using vision LLMs and multi-stage validation pipelines.</div>
       <div class="svc-stack"><span class="svc-tag">GPT-4o Vision</span><span class="svc-tag">Claude AI</span><span class="svc-tag">OCR</span></div>
-      <div class="svc-arrow">↗</div>
+      <div class="svc-arrow">&#8599;</div>
     </div>
     <div class="svc">
-      <div class="svc-num">04 — ANALYTICS</div>
-      <div class="svc-icon">📊</div>
+      <div class="svc-num">04 &#8212; ANALYTICS</div>
+      <div class="svc-icon">&#128202;</div>
       <div class="svc-title">AI-Powered Analytics</div>
-      <div class="svc-desc">We build intelligent dashboards and predictive models that surface the insights your leadership team actually needs to make confident, data-driven decisions.</div>
+      <div class="svc-desc">Intelligent dashboards and predictive models that surface the insights your leadership team needs to make confident, data-driven decisions.</div>
       <div class="svc-stack"><span class="svc-tag">Forecasting</span><span class="svc-tag">Azure ML</span><span class="svc-tag">Python</span></div>
-      <div class="svc-arrow">↗</div>
+      <div class="svc-arrow">&#8599;</div>
     </div>
     <div class="svc">
-      <div class="svc-num">05 —PROCESSING</div>
-      <div class="svc-icon">🛡️</div>
+      <div class="svc-num">05 &#8212; PROCESSING</div>
+      <div class="svc-icon">&#128737;&#65039;</div>
       <div class="svc-title">Process Automation</div>
-      <div class="svc-desc">Certified payroll processing, monitoring, and reporting — automated end-to-end with encrypted storage and audit trails built in.</div>
+      <div class="svc-desc">Certified payroll processing, monitoring, and reporting — automated end-to-end with encrypted storage and audit trails built in from day one.</div>
       <div class="svc-stack"><span class="svc-tag">Payroll AI</span><span class="svc-tag">MongoDB</span><span class="svc-tag">AES Encryption</span></div>
-      <div class="svc-arrow">↗</div>
+      <div class="svc-arrow">&#8599;</div>
     </div>
     <div class="svc">
-      <div class="svc-num">06 — CONVERSATIONAL</div>
-      <div class="svc-icon">💬</div>
-      <div class="svc-title">Intelligent Chat & Voice AI</div>
-      <div class="svc-desc">Deploy RAG-powered assistants that know your business inside out — handling customer support, lead qualification, and internal queries with human-level accuracy.</div>
+      <div class="svc-num">06 &#8212; CONVERSATIONAL</div>
+      <div class="svc-icon">&#128172;</div>
+      <div class="svc-title">Intelligent Chat &amp; Voice AI</div>
+      <div class="svc-desc">Deploy RAG-powered assistants that know your business inside out — handling support, lead qualification, and internal queries with high accuracy.</div>
       <div class="svc-stack"><span class="svc-tag">RAG</span><span class="svc-tag">Fine-Tuning</span><span class="svc-tag">LLM APIs</span></div>
-      <div class="svc-arrow">↗</div>
+      <div class="svc-arrow">&#8599;</div>
     </div>
   </div>
 </section>
 
-<!-- IMPACT -->
-<section id="impact">
-  <div class="impact-inner reveal">
-    <div class="impact-cell">
-      <div class="impact-big">80%</div>
-      <div class="impact-label">Average time saved on manual tasks</div>
-      <div class="impact-sub">// measured across clients</div>
+<!-- EXPERTISE -->
+<section id="expertise">
+  <div class="expertise-inner">
+    <div class="expertise-left reveal">
+      <div class="eyebrow">Who We Are</div>
+      <h2 class="section-title">A Team Built for<br/><span class="accent">Agentic AI.</span></h2>
+      <p class="section-desc" style="margin-bottom:2rem;">AIAdvisePro is a specialist team of AI &amp; Agentic Engineers who live at the intersection of autonomous systems and real-world business problems. We build production-ready agents, LLM pipelines, and intelligent document systems that scale and deliver lasting value.</p>
+
+      <div class="expertise-profile">
+        <div class="profile-avatar">&#128104;&#8205;&#128187;</div>
+        <div>
+          <div class="profile-name">AI &amp; Agentic Engineering Team</div>
+          <div class="profile-title">// Specialists · AIAdvisePro</div>
+          <div class="profile-bio">Our team brings 50+ projects of combined experience building production-grade agentic systems across HR tech, compliance, FinTech, and healthcare — shipping AI that reliably works at scale.</div>
+        </div>
+      </div>
+
+      <div class="expertise-badges">
+        <div class="exp-badge"><div class="exp-badge-dot"></div>Multi-Agent Orchestration</div>
+        <div class="exp-badge"><div class="exp-badge-dot"></div>LLM Pipeline Architecture</div>
+        <div class="exp-badge"><div class="exp-badge-dot"></div>Agentic Workflow Design</div>
+        <div class="exp-badge"><div class="exp-badge-dot"></div>Document AI &amp; OCR</div>
+        <div class="exp-badge"><div class="exp-badge-dot"></div>RAG &amp; Vector Search</div>
+        <div class="exp-badge"><div class="exp-badge-dot"></div>Conversational AI Systems</div>
+        <div class="exp-badge"><div class="exp-badge-dot"></div>Azure &amp; Cloud AI</div>
+        <div class="exp-badge"><div class="exp-badge-dot"></div>Neo4j Knowledge Graphs</div>
+      </div>
+
+      <div class="expertise-quote">
+        "We engineer AI agents and autonomous systems that don't just demo well — they <strong>work reliably in production</strong>. Every architecture decision is made from hands-on team experience building and shipping real agentic systems at scale."
+      </div>
     </div>
-    <div class="impact-cell">
-      <div class="impact-big">3.2×</div>
-      <div class="impact-label">Average ROI within first 6 months</div>
-      <div class="impact-sub">// audited & verified</div>
+
+    <div class="reveal reveal-delay-1">
+      <div class="expertise-stats">
+        <div class="exp-stat">
+          <div class="exp-stat-num">50+</div>
+          <div class="exp-stat-label">AI Projects Delivered</div>
+          <div class="exp-stat-sub">// agents, LLM pipelines,<br/>document AI &amp; agentic systems</div>
+        </div>
+        <div class="exp-stat">
+          <div class="exp-stat-num">8+</div>
+          <div class="exp-stat-label">Years Combined Experience</div>
+          <div class="exp-stat-sub">// production AI &amp; agentic systems<br/>across multiple industries</div>
+        </div>
+        <div class="exp-stat">
+          <div class="exp-stat-num">10+</div>
+          <div class="exp-stat-label">Industries &amp; Domains</div>
+          <div class="exp-stat-sub">// HR tech, FinTech, healthcare,<br/>compliance &amp; beyond</div>
+        </div>
+        <div class="exp-stat">
+          <div class="exp-stat-num">99%</div>
+          <div class="exp-stat-label">Document Extraction Accuracy</div>
+          <div class="exp-stat-sub">// achieved across payroll<br/>&amp; compliance workflows</div>
+        </div>
+      </div>
     </div>
-    <div class="impact-cell">
-      <div class="impact-big">10+</div>
-      <div class="impact-label">AI solutions delivered globally</div>
-      <div class="impact-sub">// and counting</div>
+  </div>
+</section>
+
+<!-- TECH STACK -->
+<section id="stack">
+  <div class="reveal" style="max-width:600px;">
+    <div class="eyebrow">Technical Depth</div>
+    <h2 class="section-title">Battle-Tested<br/><span class="accent">Tech Stack.</span></h2>
+    <p class="section-desc">Every technology choice is deliberate — selected from our team's real production experience across 50+ AI &amp; agentic engineering projects, not trend-following.</p>
+  </div>
+  <div class="stack-grid reveal">
+    <div class="stack-card">
+      <div class="stack-icon">&#129305;</div>
+      <div class="stack-category">AI Frameworks</div>
+      <div class="stack-name">Agent &amp; LLM Orchestration</div>
+      <div class="stack-tools">
+        <span class="stack-tool">LangChain</span>
+        <span class="stack-tool">LangGraph</span>
+        <span class="stack-tool">CrewAI</span>
+        <span class="stack-tool">AutoGen</span>
+        <span class="stack-tool">Anthropic SDK</span>
+        <span class="stack-tool">OpenAI SDK</span>
+      </div>
     </div>
-    <div class="impact-cell">
-      <div class="impact-big">99%</div>
-      <div class="impact-label">Document extraction accuracy</div>
-      <div class="impact-sub">// production average</div>
+    <div class="stack-card">
+      <div class="stack-icon">&#128065;&#65039;</div>
+      <div class="stack-category">Document AI</div>
+      <div class="stack-name">Vision &amp; Extraction</div>
+      <div class="stack-tools">
+        <span class="stack-tool">GPT-4o Vision</span>
+        <span class="stack-tool">Claude 3</span>
+        <span class="stack-tool">pdfplumber</span>
+        <span class="stack-tool">Unstructured.io</span>
+        <span class="stack-tool">Tesseract OCR</span>
+      </div>
+    </div>
+    <div class="stack-card">
+      <div class="stack-icon">&#9925;</div>
+      <div class="stack-category">Cloud &amp; Infrastructure</div>
+      <div class="stack-name">Deployment &amp; Scaling</div>
+      <div class="stack-tools">
+        <span class="stack-tool">Azure ML</span>
+        <span class="stack-tool">Azure Functions</span>
+        <span class="stack-tool">Docker</span>
+        <span class="stack-tool">MongoDB</span>
+        <span class="stack-tool">Neo4j</span>
+        <span class="stack-tool">Redis</span>
+      </div>
+    </div>
+    <div class="stack-card">
+      <div class="stack-icon">&#128269;</div>
+      <div class="stack-category">Search &amp; Retrieval</div>
+      <div class="stack-name">RAG &amp; Vector Pipelines</div>
+      <div class="stack-tools">
+        <span class="stack-tool">FAISS</span>
+        <span class="stack-tool">Pinecone</span>
+        <span class="stack-tool">Chroma</span>
+        <span class="stack-tool">Semantic Chunking</span>
+        <span class="stack-tool">Embeddings API</span>
+      </div>
+    </div>
+    <div class="stack-card">
+      <div class="stack-icon">&#9881;&#65039;</div>
+      <div class="stack-category">Agentic Systems</div>
+      <div class="stack-name">Autonomous Workflows</div>
+      <div class="stack-tools">
+        <span class="stack-tool">Tool Use</span>
+        <span class="stack-tool">Function Calling</span>
+        <span class="stack-tool">Memory Systems</span>
+        <span class="stack-tool">Agent Loops</span>
+        <span class="stack-tool">FastAPI</span>
+        <span class="stack-tool">Python</span>
+      </div>
+    </div>
+    <div class="stack-card">
+      <div class="stack-icon">&#128274;</div>
+      <div class="stack-category">Security &amp; Compliance</div>
+      <div class="stack-name">Enterprise-Grade Safety</div>
+      <div class="stack-tools">
+        <span class="stack-tool">AES Encryption</span>
+        <span class="stack-tool">Multi-Tenant Arch</span>
+        <span class="stack-tool">Audit Trails</span>
+        <span class="stack-tool">RBAC</span>
+        <span class="stack-tool">Compliance Checks</span>
+      </div>
+    </div>
+    <div class="stack-card">
+      <div class="stack-icon">&#129302;</div>
+      <div class="stack-category">AI Models</div>
+      <div class="stack-name">Foundation Model Expertise</div>
+      <div class="stack-tools">
+        <span class="stack-tool">Claude Sonnet/Opus</span>
+        <span class="stack-tool">GPT-4o</span>
+        <span class="stack-tool">Gemini</span>
+        <span class="stack-tool">Fine-Tuning</span>
+        <span class="stack-tool">Prompt Engineering</span>
+      </div>
+    </div>
+    <div class="stack-card">
+      <div class="stack-icon">&#127919;</div>
+      <div class="stack-category">Prompt &amp; Model Engineering</div>
+      <div class="stack-name">LLM Optimisation</div>
+      <div class="stack-tools">
+        <span class="stack-tool">Prompt Engineering</span>
+        <span class="stack-tool">Fine-Tuning</span>
+        <span class="stack-tool">Structured Outputs</span>
+        <span class="stack-tool">Chain-of-Thought</span>
+        <span class="stack-tool">Evals &amp; Testing</span>
+      </div>
     </div>
   </div>
 </section>
@@ -439,33 +560,33 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:4rem 5vw 
     <div class="reveal">
       <div class="eyebrow">Our Process</div>
       <h2 class="section-title">A Clear Path<br/>From <span class="accent">Idea to Impact</span></h2>
-      <p class="section-desc" style="margin-bottom:2.5rem;">We've stripped out everything that wastes your time. Our process is built to move efficiently, validate early, and deliver measurable results from the very start.</p>
+      <p class="section-desc" style="margin-bottom:2.5rem;">Refined across 50+ AI &amp; agentic engineering projects by our team. Every step is designed to move efficiently, validate early, and deliver measurable results — without the fluff or wasted time.</p>
       <div class="steps">
         <div class="step">
           <div class="step-num">01</div>
           <div class="step-content">
-            <div class="step-title">Discovery & Free Audit</div>
+            <div class="step-title">Discovery &amp; Free Audit</div>
             <div class="step-desc">We map your workflows, identify exactly where AI can save time and money, and give you a written audit — completely free, zero obligation.</div>
           </div>
         </div>
         <div class="step">
           <div class="step-num">02</div>
           <div class="step-content">
-            <div class="step-title">Architecture & Proposal</div>
+            <div class="step-title">Architecture &amp; Proposal</div>
             <div class="step-desc">We design the right AI solution, select the optimal models and infrastructure, and deliver a clear proposal with transparent scope and pricing.</div>
           </div>
         </div>
         <div class="step">
           <div class="step-num">03</div>
           <div class="step-content">
-            <div class="step-title">Build, Test & Pilot</div>
+            <div class="step-title">Build, Test &amp; Pilot</div>
             <div class="step-desc">We build your working pilot, run it against your real data, and show you measured results before you commit to full deployment.</div>
           </div>
         </div>
         <div class="step">
           <div class="step-num">04</div>
           <div class="step-content">
-            <div class="step-title">Deploy, Monitor & Scale</div>
+            <div class="step-title">Deploy, Monitor &amp; Scale</div>
             <div class="step-desc">Full deployment with ongoing monitoring, proactive optimisation, and a dedicated support line. We grow with you as your needs evolve.</div>
           </div>
         </div>
@@ -476,74 +597,31 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:4rem 5vw 
       <div class="terminal-wrap">
         <div class="term-bar">
           <div class="td td-r"></div><div class="td td-y"></div><div class="td td-g"></div>
-          <div class="term-title">aiadvisepro-agent — production</div>
+          <div class="term-title">aiadvisepro-agent &#8212; production</div>
         </div>
         <div class="term-body">
           <div><span class="t-dim">$</span> <span class="t-gold">aiadvisepro</span> <span class="t-white">deploy payroll-processing-agent</span></div>
-          <div class="t-dim">&nbsp;&nbsp;▸ Initialising multi-agent pipeline...</div>
-          <div class="t-dim">&nbsp;&nbsp;▸ Connecting to document store...</div>
-          <div class="t-dim">&nbsp;&nbsp;▸ Loading GPT-4o vision model...</div>
-          <div class="t-blue">&nbsp;&nbsp;▸ Scanning payroll records...</div>
-          <div class="t-blue">&nbsp;&nbsp;▸ Running processing validation...</div>
-          <div class="t-blue">&nbsp;&nbsp;▸ Cross-checking tables...</div>
-          <div class="t-green">&nbsp;&nbsp;✓ 1,284 records processed</div>
-          <div class="t-green">&nbsp;&nbsp;✓ 0 processing files detected</div>
-          <div class="t-green">&nbsp;&nbsp;✓ Encrypted report generated</div>
-          <div class="t-green">&nbsp;&nbsp;✓ Audit trail committed to DB</div>
+          <div class="t-dim">&nbsp;&nbsp;&#9656; Initialising multi-agent pipeline...</div>
+          <div class="t-dim">&nbsp;&nbsp;&#9656; Connecting to document store...</div>
+          <div class="t-dim">&nbsp;&nbsp;&#9656; Loading GPT-4o vision model...</div>
+          <div class="t-blue">&nbsp;&nbsp;&#9656; Scanning payroll records...</div>
+          <div class="t-blue">&nbsp;&nbsp;&#9656; Running validation pipeline...</div>
+          <div class="t-blue">&nbsp;&nbsp;&#9656; Cross-checking tables...</div>
+          <div class="t-green">&nbsp;&nbsp;&#10003; 1,284 records processed</div>
+          <div class="t-green">&nbsp;&nbsp;&#10003; 0 errors detected</div>
+          <div class="t-green">&nbsp;&nbsp;&#10003; Encrypted report generated</div>
+          <div class="t-green">&nbsp;&nbsp;&#10003; Audit trail committed to DB</div>
           <div>&nbsp;</div>
           <div><span class="t-dim">$</span> <span class="t-gold">status</span> <span class="t-dim">--live</span></div>
-          <div class="t-green">&nbsp;&nbsp;● Agent online — active monitoring<span class="t-cursor"></span></div>
+          <div class="t-green">&nbsp;&nbsp;&#9679; Agent online &#8212; active monitoring<span class="t-cursor"></span></div>
         </div>
         <div class="term-metrics">
           <div class="tm"><div class="tm-val gold">99.8%</div><div class="tm-label">// accuracy</div></div>
           <div class="tm"><div class="tm-val blue">0</div><div class="tm-label">// errors</div></div>
           <div class="tm"><div class="tm-val gold">Live</div><div class="tm-label">// status</div></div>
-          <div class="tm"><div class="tm-val blue">✓</div><div class="tm-label">// audit ready</div></div>
+          <div class="tm"><div class="tm-val blue">&#10003;</div><div class="tm-label">// audit ready</div></div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section id="testimonials">
-  <div class="testi-header reveal">
-    <div>
-      <div class="eyebrow">Client Results</div>
-      <h2 class="section-title">Proof in <span class="accent">Numbers.</span></h2>
-    </div>
-    <p class="section-desc">Real clients. Real results. Real ROI — measured and verified.</p>
-  </div>
-  <div class="testi-grid reveal">
-    <div class="testi">
-      <div class="testi-q">"</div>
-      <div class="testi-stars">★★★★★</div>
-      <p class="testi-text">AIAdvisePro automated our entire certified payroll pipeline. What used to take days of manual work now runs overnight, error-free. The ROI was visible before we even finished onboarding.</p>
-      <div class="testi-author">
-        <div class="testi-av av1">RK</div>
-        <div><div class="testi-name">Rajesh Kumar</div><div class="testi-role">CFO · Infrastructure Group</div></div>
-      </div>
-      <div class="testi-result"><div class="result-dot"></div>Significant reduction in processing time from day one</div>
-    </div>
-    <div class="testi">
-      <div class="testi-q">"</div>
-      <div class="testi-stars">★★★★★</div>
-      <p class="testi-text">Their approach is different — they start by understanding your business, not selling software. The document intelligence system they built handles thousands of records daily without a single human touch.</p>
-      <div class="testi-author">
-        <div class="testi-av av2">SP</div>
-        <div><div class="testi-name">Sneha Pillai</div><div class="testi-role">VP Operations · FinTech Firm</div></div>
-      </div>
-      <div class="testi-result"><div class="result-dot"></div>High accuracy, zero errors, fully automated</div>
-    </div>
-    <div class="testi">
-      <div class="testi-q">"</div>
-      <div class="testi-stars">★★★★★</div>
-      <p class="testi-text">We went from drowning in paperwork to a fully automated pipeline. Our team's review time dropped dramatically. Genuinely life-changing for the business.</p>
-      <div class="testi-author">
-        <div class="testi-av av3">AM</div>
-        <div><div class="testi-name">Ananya Mehta</div><div class="testi-role">Head of HR · Healthcare Chain</div></div>
-      </div>
-      <div class="testi-result"><div class="result-dot"></div>Drastically faster reviews, fully compliant</div>
     </div>
   </div>
 </section>
@@ -560,36 +638,36 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:4rem 5vw 
       <div class="engage-type">Explore</div>
       <div class="engage-name">Free AI Audit</div>
       <div class="engage-desc">Start here. No cost, no commitment. We assess your workflows and identify where AI can genuinely make a difference for your business.</div>
-      <a href="#contact" class="engage-cta engage-cta-outline">Book a Free Session →</a>
+      <a href="#contact" class="engage-cta engage-cta-outline">Book a Free Session &#8594;</a>
       <div class="engage-points">
-        <div class="ep"><span class="ep-check">✓</span> Discovery conversation</div>
-        <div class="ep"><span class="ep-check">✓</span> Written AI opportunity report</div>
-        <div class="ep"><span class="ep-check">✓</span> Honest, no-fluff recommendations</div>
-        <div class="ep"><span class="ep-check">✓</span> No sales pressure</div>
+        <div class="ep"><span class="ep-check">&#10003;</span> Discovery conversation</div>
+        <div class="ep"><span class="ep-check">&#10003;</span> Written AI opportunity report</div>
+        <div class="ep"><span class="ep-check">&#10003;</span> Honest, no-fluff recommendations</div>
+        <div class="ep"><span class="ep-check">&#10003;</span> No sales pressure</div>
       </div>
     </div>
     <div class="engage-card highlight">
       <div class="engage-type">Build</div>
       <div class="engage-name">Project-Based</div>
-      <div class="engage-desc">One scoped AI solution, built and delivered. Pricing is agreed upfront based on complexity — transparent, no surprises. Most clients start here.</div>
-      <a href="#contact" class="engage-cta engage-cta-gold">Let's Talk →</a>
+      <div class="engage-desc">One scoped AI solution, built and delivered. Pricing is agreed upfront based on complexity — transparent, no surprises. The most popular starting point.</div>
+      <a href="#contact" class="engage-cta engage-cta-gold">Let's Talk &#8594;</a>
       <div class="engage-points">
-        <div class="ep"><span class="ep-check">✓</span> Scoped & priced per project</div>
-        <div class="ep"><span class="ep-check">✓</span> Pilot before full deployment</div>
-        <div class="ep"><span class="ep-check">✓</span> Full integration with your stack</div>
-        <div class="ep"><span class="ep-check">✓</span> Post-launch support included</div>
+        <div class="ep"><span class="ep-check">&#10003;</span> Scoped &amp; priced per project</div>
+        <div class="ep"><span class="ep-check">&#10003;</span> Pilot before full deployment</div>
+        <div class="ep"><span class="ep-check">&#10003;</span> Full integration with your stack</div>
+        <div class="ep"><span class="ep-check">&#10003;</span> Post-launch support included</div>
       </div>
     </div>
     <div class="engage-card">
       <div class="engage-type">Scale</div>
       <div class="engage-name">Ongoing Partnership</div>
       <div class="engage-desc">For teams that want a long-term AI partner. We work alongside your team on a retainer basis — building, maintaining, and evolving your AI capabilities over time.</div>
-      <a href="#contact" class="engage-cta engage-cta-outline">Discuss Your Needs →</a>
+      <a href="#contact" class="engage-cta engage-cta-outline">Discuss Your Needs &#8594;</a>
       <div class="engage-points">
-        <div class="ep"><span class="ep-check">✓</span> Monthly retainer, flexible scope</div>
-        <div class="ep"><span class="ep-check">✓</span> Dedicated point of contact</div>
-        <div class="ep"><span class="ep-check">✓</span> Proactive monitoring & improvements</div>
-        <div class="ep"><span class="ep-check">✓</span> Strategy reviews included</div>
+        <div class="ep"><span class="ep-check">&#10003;</span> Monthly retainer, flexible scope</div>
+        <div class="ep"><span class="ep-check">&#10003;</span> Dedicated point of contact</div>
+        <div class="ep"><span class="ep-check">&#10003;</span> Proactive monitoring &amp; improvements</div>
+        <div class="ep"><span class="ep-check">&#10003;</span> Strategy reviews included</div>
       </div>
     </div>
   </div>
@@ -606,29 +684,29 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:4rem 5vw 
   <div class="contact-grid reveal">
     <div class="contact-info">
       <div class="contact-card">
-        <div class="contact-icon">✉️</div>
+        <div class="contact-icon">&#9993;&#65039;</div>
         <div>
           <div class="contact-label">Email Us</div>
-          <div class="contact-value"><a href="mailto:aiadvisepro@gmail.com">aiadvisepro@gmail.com</a></div>
+          <div class="contact-value"><a href="/cdn-cgi/l/email-protection#b8d9d1d9dcced1cbddc8cad7f8dfd5d9d1d496dbd7d5"><span class="__cf_email__" data-cfemail="ddbcb4bcb9abb4aeb8adafb29dbab0bcb4b1f3beb2b0">[email&#160;protected]</span></a></div>
         </div>
       </div>
       <div class="contact-card">
-        <div class="contact-icon">📞</div>
+        <div class="contact-icon">&#128222;</div>
         <div>
           <div class="contact-label">Call / WhatsApp</div>
           <div class="contact-value"><a href="tel:+919622759081">+91 96227 59081</a></div>
         </div>
       </div>
       <div class="contact-card">
-        <div class="contact-icon">📍</div>
+        <div class="contact-icon">&#128205;</div>
         <div>
           <div class="contact-label">Based In</div>
-          <div class="contact-value">Bangalore, India · Serving clients globally</div>
+          <div class="contact-value">Bangalore, India &#183; Serving clients globally</div>
         </div>
       </div>
       <div class="contact-note">
         <div class="contact-note-text">
-          <strong>We respond to every enquiry personally.</strong> Fill in the form and we'll get back to you within one business day to understand your needs and figure out the best way to help.
+          <strong>We respond to every enquiry personally.</strong> Fill in the form and our team will get back to you within one business day to understand your needs and figure out the best way to help.
         </div>
       </div>
     </div>
@@ -645,7 +723,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:4rem 5vw 
           </div>
           <div class="form-group">
             <label class="form-label" for="lname">Last Name</label>
-            <input class="form-input" type="text" id="lname" name="Goshal" placeholder="Goshal"/>
+            <input class="form-input" type="text" id="lname" name="last_name" placeholder="Goshal"/>
           </div>
         </div>
 
@@ -668,15 +746,15 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:4rem 5vw 
           <label class="form-label" for="interest">What are you most interested in? *</label>
           <select class="form-select form-input" id="interest" name="interest" required>
             <option value="" disabled selected>Select a service...</option>
-            <option value="AI Audit (Free)">AI Audit — Free, no commitment</option>
-            <option value="AI Strategy & Roadmap">AI Strategy & Roadmap</option>
+            <option value="AI Audit (Free)">AI Audit &#8212; Free, no commitment</option>
+            <option value="AI Strategy & Roadmap">AI Strategy &amp; Roadmap</option>
             <option value="Custom AI Agent Development">Custom AI Agent Development</option>
             <option value="AI Document Intelligence">AI Document Intelligence</option>
-            <option value="Process Automation">Medical Automation</option>
-            <option value="AI Analytics & Reporting">AI Analytics & Reporting</option>
+            <option value="Process Automation">Process Automation</option>
+            <option value="AI Analytics & Reporting">AI Analytics &amp; Reporting</option>
             <option value="Conversational AI / Chatbot">Conversational AI / Chatbot</option>
             <option value="Ongoing Partnership">Ongoing Partnership / Retainer</option>
-            <option value="Not sure yet">Not sure yet — need guidance</option>
+            <option value="Not sure yet">Not sure yet &#8212; need guidance</option>
           </select>
         </div>
 
@@ -695,7 +773,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:4rem 5vw 
       </form>
 
       <div class="form-success" id="formSuccess">
-        <div class="form-success-icon">✅</div>
+        <div class="form-success-icon">&#9989;</div>
         <div class="form-success-title">Message Sent!</div>
         <div class="form-success-text">Thank you for reaching out. We'll get back to you personally within one business day.</div>
       </div>
@@ -710,24 +788,24 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:4rem 5vw 
       <div class="footer-logo">
         <img src="logo.png" alt="AIAdvisePro" style="height:44px;width:auto;display:block;"/>
       </div>
-      <div class="footer-tagline">We help ambitious businesses turn AI from a buzzword into a genuine competitive advantage.</div>
+      <div class="footer-tagline">A specialist team in AI &amp; Agentic Engineering. Built to turn AI from a buzzword into your genuine competitive advantage.</div>
     </div>
     <div>
       <div class="footer-col-title">Services</div>
       <ul class="footer-links">
-        <li><a href="#services">AI Strategy & Roadmap</a></li>
+        <li><a href="#services">AI Strategy &amp; Roadmap</a></li>
         <li><a href="#services">Agent Development</a></li>
         <li><a href="#services">AI Document Intelligence</a></li>
-        <li><a href="#services">Analytics & Reporting</a></li>
+        <li><a href="#services">Analytics &amp; Reporting</a></li>
         <li><a href="#services">Process Automation</a></li>
       </ul>
     </div>
     <div>
       <div class="footer-col-title">Company</div>
       <ul class="footer-links">
-        <li><a href="#">About Us</a></li>
+        <li><a href="#expertise">About &amp; Agentic Expertise</a></li>
+        <li><a href="#stack">Tech Stack</a></li>
         <li><a href="#how">Our Process</a></li>
-        <li><a href="#testimonials">Case Studies</a></li>
         <li><a href="#engage">Engagement</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -735,7 +813,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:4rem 5vw 
     <div>
       <div class="footer-col-title">Contact</div>
       <ul class="footer-links">
-        <li><a href="mailto:aiadvisepro@gmail.com">aiadvisepro@gmail.com</a></li>
+        <li><a href="/cdn-cgi/l/email-protection#c1a0a8a0a5b7a8b2a4b1b3ae81a6aca0a8adefa2aeac"><span class="__cf_email__" data-cfemail="2f4e464e4b59465c4a5f5d406f48424e4643014c4042">[email&#160;protected]</span></a></li>
         <li><a href="tel:+919622759081">+91 96227 59081</a></li>
         <li><a href="#contact">Send a Message</a></li>
         <li><a href="https://www.linkedin.com/company/aiadvise-pro/about/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
@@ -744,12 +822,12 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:4rem 5vw 
     </div>
   </div>
   <div class="footer-bottom">
-    <span>© 2026 AIAdvisePro. All rights reserved.</span>
+    <span>&#169; 2026 AIAdvisePro. All rights reserved.</span>
     <span>Built with purpose. Powered by AI.</span>
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 const cursor=document.getElementById('cursor');
 const ring=document.getElementById('cursor-ring');
 let mx=0,my=0,rx=0,ry=0;
@@ -759,29 +837,8 @@ document.querySelectorAll('a,button').forEach(el=>{
   el.addEventListener('mouseenter',()=>{cursor.style.transform='translate(-50%,-50%) scale(2.5)';ring.style.transform='translate(-50%,-50%) scale(1.6)';ring.style.borderColor='rgba(240,165,0,0.7)';});
   el.addEventListener('mouseleave',()=>{cursor.style.transform='translate(-50%,-50%) scale(1)';ring.style.transform='translate(-50%,-50%) scale(1)';ring.style.borderColor='rgba(240,165,0,0.4)';});
 });
-
-const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});},{threshold:0.08});
-document.querySelectorAll('.reveal').forEach(r=>obs.observe(r));
-
-function countUp(el,target,suffix){
-  const isFloat=String(target).includes('.');
-  let i=0,steps=50;
-  const timer=setInterval(()=>{
-    i++;const v=isFloat?parseFloat((target*i/steps).toFixed(1)):Math.floor(target*i/steps);
-    el.innerHTML=v+suffix;
-    if(i>=steps){el.innerHTML=target+suffix;clearInterval(timer);}
-  },20);
-}
-const impObs=new IntersectionObserver(entries=>{
-  if(entries[0].isIntersecting){
-    const cells=document.querySelectorAll('.impact-big');
-    countUp(cells[0],80,'%');countUp(cells[1],3.2,'×');countUp(cells[2],20,'+');countUp(cells[3],99,'%');
-    impObs.disconnect();
-  }
-},{threshold:0.3});
-const impSec=document.getElementById('impact');
-if(impSec)impObs.observe(impSec);
-
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});},{threshold:0.05});
+document.querySelectorAll('.reveal').forEach(r=>{r.classList.add('animate-ready');obs.observe(r);});
 const form=document.getElementById('contactForm');
 const btn=document.getElementById('submitBtn');
 const success=document.getElementById('formSuccess');
@@ -789,24 +846,10 @@ if(form){
   form.addEventListener('submit',async function(e){
     e.preventDefault();
     btn.disabled=true;
-    btn.innerHTML='Sending... <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 3v10M3 8l5-5 5 5" stroke="#08090c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+    btn.innerHTML='Sending...';
     try{
       const res=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{Accept:'application/json'}});
       if(res.ok){
         form.style.display='none';
         success.style.display='block';
-      } else {
-        btn.disabled=false;
-        btn.innerHTML='Send Message <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#08090c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
-        alert('Something went wrong. Please email us directly at aiadvisepro@gmail.com');
-      }
-    } catch(err){
-      btn.disabled=false;
-      btn.innerHTML='Send Message →';
-      alert('Could not send. Please email us at aiadvisepro@gmail.com or call +91 96227 59081');
-    }
-  });
-}
-</script>
-</body>
-</html>
+      } el
